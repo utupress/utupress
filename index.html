@@ -1,4 +1,5 @@
 <html>
+
 <body>
   <div id="app">
     <router-view></router-view>
@@ -6,16 +7,26 @@
   <script src="https://unpkg.com/vue@next"></script>
   <script src="https://unpkg.com/vue-router@4"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue3-sfc-loader"></script>
+  <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
   <script src="https://utupress.github.io/tags/vue-load-module.js"></script>
 
+  <!--Load Database connector -->
+  <script src="./db.js"></script>
+
   <script>
+
 
     // 2. Define some routes
     // Each route should map to a component.
     // We'll talk about nested routes later.
-    const routes = [
-      { path: '/', component: fetchWebsite('website.vue') },
-      { path: '/about', component: fetchWebsite('website.vue') },
+    const routes = [{
+        path: '/',
+        component: fetchWebsite('home.vue')
+      },
+      {
+        path: '/about',
+        component: fetchWebsite('about.vue')
+      },
     ]
 
     // 3. Create the router instance and pass the `routes` option
@@ -35,8 +46,8 @@
     app.use(router)
 
     app.mount('#app');
-
   </script>
-  
+
 </body>
+
 </html>
