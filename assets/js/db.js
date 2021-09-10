@@ -21,7 +21,6 @@
       //
       // Display the result
       //
-      alert("Limit is set ");
     }).catch(function (error) {
       //
       // Finally don't forget to catch any error
