@@ -1,17 +1,19 @@
 <html>
 
 <body>
+
   <div id="app">
     <router-view></router-view>
   </div>
+
   <script src="https://unpkg.com/vue@next"></script>
   <script src="https://unpkg.com/vue-router@4"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue3-sfc-loader"></script>
   <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
-  <script src="https://utupress.github.io/tags/vue-load-module.js"></script>
+  <script src="https://utupress.github.io/blocks/vue-load-module.js"></script>
 
   <!--Load Database connector -->
-  <script src="./db.js"></script>
+  <script src="./assets/js/db.js"></script>
 
   <script>
 
@@ -21,11 +23,11 @@
     // We'll talk about nested routes later.
     const routes = [{
         path: '/',
-        component: fetchWebsite('home.vue')
+        component: fetchPage('home.vue')
       },
       {
         path: '/about',
-        component: fetchWebsite('about.vue')
+        component: fetchPage('about.vue')
       },
     ]
 
@@ -34,8 +36,8 @@
     // keep it simple for now.
     const router = VueRouter.createRouter({
       // 4. Provide the history implementation to use. We are using the hash history for simplicity here.
-      history: VueRouter.createWebHistory('/'),
-      //history: VueRouter.createWebHashHistory(),
+      //history: VueRouter.createWebHistory('/'),
+      history: VueRouter.createWebHashHistory(),
       //mode: 'history',
       routes, // short for `routes: routes`
     })
