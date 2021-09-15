@@ -7,12 +7,14 @@
 
   export default {
     components: this.getComponents(),
-    data () {
+    created(){
+      alert('sdfsdfsdf');
+    },
+    data () { 
       return {
         msg: 'world!'
       }
     },
-
     methods: {
       getComponents(){
         return {
