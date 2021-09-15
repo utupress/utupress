@@ -7,8 +7,8 @@
 
   export default {
     components: {
-      'header1': fetchTag('header1'),
-      'harticle': fetchTag('harticle'),
+      'header1': fetchBlock('header1'),
+      'harticle': fetchBlock('harticle'),
     },
     data () {
       return {
