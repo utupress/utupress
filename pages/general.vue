@@ -18,8 +18,8 @@
     methods: {
       getComponents(){
         return {
-              'header1': fetchTag('header1'),
-              'harticle': fetchTag('harticle'),
+              'header1': fetchBlock('header1'),
+              'harticle': fetchBlock('harticle'),
             }
       }
     }
