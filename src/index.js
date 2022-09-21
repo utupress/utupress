@@ -3,7 +3,7 @@ import Utupress from "./utupress.vue";
 function install(Vue) {
   if (install.installed) return;
   install.installed = true;
-  Vue.component("v-utupress", Utupress);
+  Vue.component("utupress", Utupress);
 }
 
 const plugin = {

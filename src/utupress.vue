@@ -1,5 +1,5 @@
 <template>
-    <ul class="breadcrumb">
+    <ul class="utupress">
         <li v-for="item in items" :key="item.href">
             <a v-show="item.href && item.href.length>0 && !item.active" :href="item.href">{{item.text}}</a>
             <span v-show="item.active && item.active === true">{{item.text}}</span>
@@ -20,29 +20,29 @@ export default {
 </script>
   
 <style scoped>
-ul.breadcrumb {
+ul.utupress {
     padding: 10px 16px;
     list-style: none;
     background-color: #eee;
 }
 
-ul.breadcrumb li {
+ul.utupress li {
     display: inline;
     font-size: 18px;
 }
 
-ul.breadcrumb li+li:before {
+ul.utupress li+li:before {
     padding: 8px;
     color: black;
     content: "/\00a0";
 }
 
-ul.breadcrumb li a {
+ul.utupress li a {
     color: #0275d8;
     text-decoration: none;
 }
 
-ul.breadcrumb li a:hover {
+ul.utupress li a:hover {
     color: #01447e;
     text-decoration: underline;
 }
